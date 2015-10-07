@@ -256,11 +256,6 @@ for (var i = 0; i < ems.length; i++) {
     }, false);
 }
 
-document.querySelector('a.the-letter').addEventListener('click', function(e) {
-    e.preventDefault();
-    modal_show('letter');
-});
-
 document.querySelector('button.add-your-name').addEventListener('click', function(e) {
     e.preventDefault();
     location.hash = 'add-your-name';
