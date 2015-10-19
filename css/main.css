@@ -565,11 +565,21 @@ section ul {
 }
 
 section ul li {
-    margin: 0 64px 16px;
+    margin: 0 64px 16px 110px;
+    position: relative;
 }
 
 section ul li strong {
     color: #ffa600;
+}
+
+section ul li .number {
+    color: #363955;
+    font-size: 84px;
+    font-weight: bold;
+    left: -68px;
+    position: absolute;
+    top: -26px;
 }
 
 @media screen and (max-width: 479px) {
