@@ -264,6 +264,10 @@ header ul li {
     z-index: 4;
 }
 
+.action a {
+    color: inherit;
+}
+
 .action h2 {
     color: #F2EBC7;
     font-size: 36px;

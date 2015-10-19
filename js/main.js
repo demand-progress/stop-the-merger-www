@@ -22,97 +22,6 @@ Thanks!";
 
 
 
-// Organizations
-var organizations = [
-    {
-        "disclaimer": true,
-        "id": "maverick",
-        "isPooling": true,
-        "title": "Maverick",
-    },
-
-    {
-        "disclaimer": true,
-        "id": "dp",
-        "isPooling": true,
-        "title": "Demand Progress",
-    },
-
-    {
-        "disclaimer": true,
-        "id": "dp-ns",
-        "isPooling": false,
-        "title": "Demand Progress",
-    },
-
-    {
-        "disclaimer": "<a href=\"http://www.fightforthefuture.org/\" target=\"_blank\">Fight for the Future</a> will contact you about future campaigns. <a href=\"http://www.fightforthefuture.org/privacy/\" target=\"_blank\">Privacy Policy</a>.</p>",
-        "id": "fftf",
-        "isPooling": true,
-        "title": "Fight for the Future",
-    },
-
-    {
-        "disclaimer": "<a href=\"http://www.fightforthefuture.org/\" target=\"_blank\">Fight for the Future</a> will contact you about future campaigns. <a href=\"http://www.fightforthefuture.org/privacy/\" target=\"_blank\">Privacy Policy</a>.</p>",
-        "id": "fftf-ns",
-        "isPooling": false,
-        "title": "Fight for the Future",
-    },
-
-    {
-        "disclaimer": true,
-        "id": "dk",
-        "isPooling": true,
-        "title": "Daily Kos",
-    },
-
-    {
-        "disclaimer": true,
-        "id": "om",
-        "isPooling": true,
-        "title": "OpenMedia",
-    },
-
-    {
-        "disclaimer": true,
-        "id": "cc",
-        "isPooling": true,
-        "title": "Color of Change",
-    },
-
-    {
-        "disclaimer": true,
-        "id": "ra",
-        "isPooling": true,
-        "title": "RootsAction",
-    },
-
-    {
-        "disclaimer": true,
-        "id": "wd",
-        "isPooling": true,
-        "title": "Watchdog.net",
-    },
-];
-
-var ref = location.search.match(/ref=([\w-]+)/);
-var org;
-if (ref) {
-    for (var i = 0; i < organizations.length; i++) {
-        if (ref[1] === organizations[i].id) {
-            org = organizations[i];
-            break;
-        }
-    }
-}
-
-var maverick = false;
-if (!org) {
-    maverick = true;
-    org = organizations[0];
-}
-
-
 
 // Check for outdated browsers
 var isIE = navigator.userAgent.match(/MSIE (\d+)\./);
@@ -131,7 +40,7 @@ if (navigator.userAgent.match(/Android 2\.3/)) {
 
 // Fill in dynamic form fields
 document.querySelector('[name=action_user_agent]').value = navigator.userAgent;
-document.querySelector('[name=source]').value = org.id;
+document.querySelector('[name=source]').value = StaticKit.query.source;
 document.querySelector('[name=url]').value = location.href;
 
 
@@ -226,7 +135,7 @@ for (var i = 0; i < fb.length; i++) {
         e.preventDefault();
         window.open(
             'https://www.facebook.com/sharer/sharer.php?u=' +
-            encodeURIComponent(DOMAIN + '/?source=' + org.id + '-fbshare')
+            encodeURIComponent(DOMAIN + '/?source=' + StaticKit.query.cleanedSource + '-fbshare')
         );
     }, false);
 }
@@ -238,7 +147,7 @@ for (var i = 0; i < tws.length; i++) {
         window.open(
             'https://twitter.com/intent/tweet?text=' +
             encodeURIComponent(
-                TWEET_TEXT.replace('${source}', org.id)
+                TWEET_TEXT.replace('${source}', StaticKit.query.cleanedSource)
             )
         );
     }, false);
@@ -251,7 +160,7 @@ for (var i = 0; i < ems.length; i++) {
         window.location.href =
             'mailto:?subject=' + encodeURIComponent(EMAIL_SUBJECT) +
             '&body=' + encodeURIComponent(
-                EMAIL_BODY.replace('${source}', org.id)
+                EMAIL_BODY.replace('${source}', StaticKit.query.cleanedSource)
             );
     }, false);
 }
@@ -261,19 +170,14 @@ document.querySelector('button.add-your-name').addEventListener('click', functio
     location.hash = 'add-your-name';
 });
 
+document.querySelector('a.the-letter').addEventListener('click', function(e) {
+    e.preventDefault();
+    modal_show('letter');
+});
+
 function removeNode(target) {
     var node = document.querySelector(target);
     node.parentElement.removeChild(node);
-}
-
-var disclaimer = document.querySelector('.disclaimer');
-if (org.isPooling) {
-    if (org.disclaimer === false) {
-        removeNode('.disclaimer');
-    }
-} else {
-    removeNode('.squaredFour.pooling');
-    document.querySelector('.disclaimer').innerHTML = org.disclaimer;
 }
 
 var resizeTimeout = false;
