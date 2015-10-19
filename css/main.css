@@ -266,6 +266,11 @@ header ul li {
 
 .action a {
     color: inherit;
+    transition: 0.16s all;
+}
+
+.action a:hover {
+    color: #ffa600;
 }
 
 .action h2 {
