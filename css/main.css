@@ -266,7 +266,7 @@ header ul li {
 
 .action a {
     color: inherit;
-    transition: 0.16s all;
+    transition: 0.16s color;
 }
 
 .action a:hover {
@@ -362,8 +362,8 @@ header ul li {
     background-color: #ffa600;
     width: 100%;
 
-    -webkit-transition: background-color 0.15s;
-            transition: background-color 0.15s;
+    -webkit-transition: background-color 0.16s;
+            transition: background-color 0.16s;
 }
 
 .action .email_signup button:hover {
@@ -507,13 +507,16 @@ section {
 }
 
 section a {
-    color: #348899;
+    color: #ffa600;
     font-weight: bold;
+    text-decoration: none;
+    transition: 0.16s color;
 }
 
 section a:hover {
-    color: #3b9cb0;
+    color: #ff9000;
 }
+
 
 section.dark {
     background: #171717;
@@ -571,8 +574,8 @@ section button.add-your-name {
     margin: 8px 0 0;
     padding: 0 32px;
 
-    -webkit-transition: background-color 0.15s;
-            transition: background-color 0.15s;
+    -webkit-transition: background-color 0.16s;
+            transition: background-color 0.16s;
 }
 
 section button.add-your-name:hover {
