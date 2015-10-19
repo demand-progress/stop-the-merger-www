@@ -156,18 +156,21 @@ header .headlines h1 .block {
 header .headlines h1 .line-1 {
     color: #f0f4f5;
     font-size: 24px;
+    letter-spacing: 1px;
 }
 
 header .headlines h1 .line-2 {
     color: #f0f4f5;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 header .headlines h1 .line-3 {
     color: #f0f4f5;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 header .headlines h1 .orange {
