@@ -506,18 +506,24 @@ p.explanation {
 
 section {
     color: #f0f4f5;
-    padding: 42px 0 25px 0;
+    padding: 0 0 25px 0;
+}
+
+section h3 {
+    color: #ffa600;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 64px 0 32px;
 }
 
 section a {
-    color: #ffa600;
-    font-weight: bold;
-    text-decoration: none;
+    color: inherit;
     transition: 0.16s color;
 }
 
 section a:hover {
-    color: #ff9000;
+    color: #ffa600;
 }
 
 
@@ -560,6 +566,10 @@ section ul {
 
 section ul li {
     margin: 0 64px 16px;
+}
+
+section ul li strong {
+    color: #ffa600;
 }
 
 @media screen and (max-width: 479px) {
@@ -1015,6 +1025,7 @@ div.social-buttons a.email {
 section.midnight-share-train {
     background-color: #22242D;
     margin: 32px 0 0;
+    padding: 24px 0 0;
 }
 
 section.midnight-share-train a:hover {
