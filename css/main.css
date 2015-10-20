@@ -108,11 +108,11 @@ header em {
 
 header p {
     color: #f0f4f5;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 30px;
     margin: 0px auto;
-    max-width: 860px;
+    max-width: 880px;
     padding: 0 32px;
     text-align: center;
 }
@@ -161,14 +161,14 @@ header .headlines h1 .line-1 {
 
 header .headlines h1 .line-2 {
     color: #f0f4f5;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 header .headlines h1 .line-3 {
     color: #f0f4f5;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -278,7 +278,7 @@ header ul li {
 
 .action h2 {
     color: #F2EBC7;
-    font-size: 36px;
+    font-size: 24px;
     letter-spacing: normal;
     padding: 0px 0px 16px;
 }
@@ -292,7 +292,7 @@ header ul li {
 
 .action h4 {
     color: #f0f4f5;
-    font-size: 29px;
+    font-size: 24px;
     line-height: 1.2;
     font-weight: bold;
     padding: 0 0 24px;
@@ -583,8 +583,12 @@ section ul li .number {
 }
 
 @media screen and (max-width: 479px) {
+    section ul li .number {
+        left: -68px;
+    }
+
     section ul li {
-        margin: 0 32px 16px;
+        margin: 0 14px 16px 60px;
     }
 }
 
