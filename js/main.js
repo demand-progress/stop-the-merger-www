@@ -203,9 +203,11 @@ if (window.location.href.indexOf('call=1') != -1) {
 if (location.hash === '#confirmed') {
     modal_show('confirmed');
     showThanks();
+    location.hash = '';
 } else if (location.hash === '#sent') {
     modal_show('sent');
     showThanks();
+    location.hash = '';
 }
 
 function showThanks() {
