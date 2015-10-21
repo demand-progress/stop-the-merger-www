@@ -54,11 +54,6 @@ table {
     visibility: hidden;
 }
 
-.clear {
-    display: inline-block;
-}
-
-
 /* hide IE mac \*/
 
 * html .clear {
@@ -274,6 +269,13 @@ header ul li {
 
 .action a:hover {
     color: #ffa600;
+}
+
+.action .squaredFour.pooling {
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #7582ba;
+    line-height: 1.4;
 }
 
 .action h2 {
@@ -1046,9 +1048,7 @@ section.midnight-share-train a:hover {
     color: #fff;
 }
 
-
 /* Checkbox */
-
 .squaredFour {
     width: 20px;
     margin: 20px auto;
@@ -1062,17 +1062,18 @@ section.midnight-share-train a:hover {
 }
 
 .squaredFour input[type=checkbox] {
-    visibility: hidden;
+    display: none;
     height: auto;
-    width: 1px;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    visibility: hidden;
+    width: 1px;
 }
 
 .squaredFour label.text {
     cursor: pointer;
     float: left;
-    margin: -18px 0 24px;
+    margin: 0;
     padding: 0 0 0 36px;
     position: relative;
 }
@@ -1085,16 +1086,18 @@ section.midnight-share-train a:hover {
     top: 0;
     left: 0;
     border-radius: 4px;
-    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
     background: #fcfff4;
+
     background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
     background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
     background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
     background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
     background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
 }
 
 .squaredFour label.checkbox:after {
@@ -1111,6 +1114,7 @@ section.midnight-share-train a:hover {
     border: 3px solid #333;
     border-top: none;
     border-right: none;
+
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
@@ -1123,6 +1127,8 @@ section.midnight-share-train a:hover {
     filter: alpha(opacity=100);
     opacity: 1;
 }
+
+
 
 @media screen and (min-width: 480px) {
     .mobile {
