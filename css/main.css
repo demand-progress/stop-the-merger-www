@@ -552,8 +552,15 @@ section p {
     text-align: center;
     font-size: 18px;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 1.4;
     padding: 0 32px;
+}
+
+section p.larger {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 12px;
+    padding-top: 20px;
 }
 
 section ul {
