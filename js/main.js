@@ -128,40 +128,41 @@ bindModalEvents('letter');
 bindModalEvents('sent');
 bindModalEvents('share_modal');
 
-var fb = document.querySelectorAll('a.facebook');
-for (var i = 0; i < fb.length; i++) {
-    fb[i].addEventListener('click', function(e) {
-        e.preventDefault();
-        window.open(
-            'https://www.facebook.com/sharer/sharer.php?u=' +
-            encodeURIComponent(DOMAIN + '?source=' + StaticKit.query.cleanedSource + '-fbshare')
-        );
-    }, false);
+var fbs = document.querySelectorAll('a.facebook');
+for (var i = 0; i < fbs.length; i++) {
+    fbs[i].setAttribute('target', '_blank');
+    fbs[i].setAttribute(
+        'href',
+
+        'https://www.facebook.com/sharer/sharer.php?u=' +
+        encodeURIComponent(DOMAIN + '?source=' + StaticKit.query.cleanedSource + '-fbshare')
+    );
 }
 
 var tws = document.querySelectorAll('a.twitter');
 for (var i = 0; i < tws.length; i++) {
-    tws[i].addEventListener('click', function(e) {
-        e.preventDefault();
-        window.open(
-            'https://twitter.com/intent/tweet?text=' +
-            encodeURIComponent(
-                TWEET_TEXT.replace('${source}', StaticKit.query.cleanedSource)
-            )
-        );
-    }, false);
+    tws[i].setAttribute('target', '_blank');
+    tws[i].setAttribute(
+        'href',
+
+        'https://twitter.com/intent/tweet?text=' +
+        encodeURIComponent(
+            TWEET_TEXT.replace('${source}', StaticKit.query.cleanedSource)
+        )
+    );
 }
 
 var ems = document.querySelectorAll('a.email');
 for (var i = 0; i < ems.length; i++) {
-    ems[i].addEventListener('click', function(e) {
-        e.preventDefault();
-        window.location.href =
-            'mailto:?subject=' + encodeURIComponent(EMAIL_SUBJECT) +
-            '&body=' + encodeURIComponent(
-                EMAIL_BODY.replace('${source}', StaticKit.query.cleanedSource)
-            );
-    }, false);
+    // ems[i].setAttribute('target', '_blank');
+    ems[i].setAttribute(
+        'href',
+
+        'mailto:?subject=' + encodeURIComponent(EMAIL_SUBJECT) +
+        '&body=' + encodeURIComponent(
+            EMAIL_BODY.replace('${source}', StaticKit.query.cleanedSource)
+        )
+    );
 }
 
 document.querySelector('a.the-letter').addEventListener('click', function(e) {
