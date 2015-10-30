@@ -4,16 +4,12 @@
 
 
 // Share text
-var DOMAIN = "fightbigmoney.com";
-var TWEET_TEXT = "I just called on the presidential candidates to lay out a concrete plan to #FightBigMoney in politics! Join here: http://" + DOMAIN + "/?ref=${source}-twshare";
+var DOMAIN = "demand-progress.github.io/stop-the-merger-www";
+var TWEET_TEXT = "I just called on the @FCC to stop the #CharterTWC merger! Join here: http://" + DOMAIN + "/?ref=${source}-twshare #NoMoreMergers";
 var EMAIL_SUBJECT = "Sign this petition to fight big money in politics?";
 var EMAIL_BODY = "Hi,\
 \n\n\
-I just signed the petition telling the presidential candidates to lay out a concrete, serious plan to fight big money in politics.\
-\n\n\
-The only way we'll make progress is if candidates know the American people are demanding a change. Could you sign, too?\
-\n\n\
-http://www." + DOMAIN + "/?source=${source}-emailshare\
+I just called on the @FCC to stop the #CharterTWC merger! Join here: http://" + DOMAIN + "/?ref=${source}-emailshare\
 \n\n\
 Thanks!";
 
