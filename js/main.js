@@ -6,7 +6,7 @@
 // Share text
 var DOMAIN = window.DOMAIN || "nomoremergers.com";
 var TWEET_TEXT = "I just called on the @FCC to stop the #CharterTWC merger! Join here: http://" + DOMAIN + "?ref=${source}-twshare #NoMoreMergers";
-var EMAIL_SUBJECT = "Sign this petition to fight big money in politics?";
+var EMAIL_SUBJECT = "Sign this petition to stop the Charter-Time Warner Cable merger?";
 var EMAIL_BODY = "Hi,\
 \n\n\
 I just called on the FCC to stop the Charter-Time Warner Cable merger! Join here: http://" + DOMAIN + "?ref=${source}-emailshare\
