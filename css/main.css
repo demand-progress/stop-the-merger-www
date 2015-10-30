@@ -685,13 +685,9 @@ section .share {
 
 .logos img {
     max-width: 280px;
-    height: auto;
+    max-height: 120px;
     vertical-align: middle;
     margin: 0px 20px 32px;
-}
-
-.logos img.smaller {
-    max-width: 140px;
 }
 
 .press {
