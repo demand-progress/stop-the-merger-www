@@ -46,6 +46,8 @@ document.querySelector('[name=url]').value = location.href;
 
 
 var requiredFields = [
+    'name',
+    'address1',
     'email',
     'postcode',
 ];
@@ -56,8 +58,9 @@ document.querySelector('.email_signup form').addEventListener('submit', function
 
         if (!document.getElementById(field).value) {
             e.preventDefault();
-            alert('Please enter your ' + field.replace(/_/g, ' ') + '.');
-            return document.getElementById(field).focus();
+            var el = document.getElementById(field);
+            alert('Please enter your ' + el.getAttribute('placeholder') + '.');
+            return el.focus();
         }
     }
 
