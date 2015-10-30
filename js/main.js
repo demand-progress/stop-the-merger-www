@@ -4,7 +4,7 @@
 
 
 // Share text
-var DOMAIN = "demand-progress.github.io/stop-the-merger-www";
+var DOMAIN = "nomoremergers.com";
 var TWEET_TEXT = "I just called on the @FCC to stop the #CharterTWC merger! Join here: http://" + DOMAIN + "/?ref=${source}-twshare #NoMoreMergers";
 var EMAIL_SUBJECT = "Sign this petition to fight big money in politics?";
 var EMAIL_BODY = "Hi,\
