@@ -643,7 +643,7 @@ section.take-action p {
 .share {
     border-radius: 60px;
     padding: 10px;
-    background: #222;
+    background: #45484b;
     display: inline-block;
 }
 
@@ -690,7 +690,7 @@ section .share {
 }
 
 .logos {
-    background-color: #fff;
+    background-color: #1E1F21;
     margin: 0 auto;
     overflow: hidden;
     padding: 48px 0 24px;
@@ -1066,7 +1066,7 @@ div.social-buttons a.email {
 }
 
 section.midnight-share-train {
-    background-color: #22242D;
+    background-color: #28292b;
     margin: 32px 0 0;
     padding: 24px 0 0;
 }
