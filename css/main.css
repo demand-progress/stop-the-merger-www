@@ -668,28 +668,30 @@ section .share {
 }
 
 .logos {
-    background-color: #343642;
-    margin: 0;
-    padding: 48px 0 24px;
+    background-color: #fff;
+    margin: 0 auto;
     overflow: hidden;
+    padding: 48px 0 24px;
+}
+
+.logos .wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 32px;
 }
 
 .logos a {
-    opacity: .6;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s;
-}
-
-.logos a:hover {
-    opacity: .8;
 }
 
 .logos img {
-    border-radius: 5px;
     max-width: 280px;
     height: auto;
     vertical-align: middle;
     margin: 0px 20px 32px;
+}
+
+.logos img.smaller {
+    max-width: 140px;
 }
 
 .press {
