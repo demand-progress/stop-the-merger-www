@@ -637,7 +637,21 @@ section.take-action h2 .wrapper {
 }
 
 section.take-action p {
+    font-size: 15px;
     font-weight: 700;
+}
+
+section.take-action p.video {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 auto 32px;
+    max-width: 484px;
+    text-align: left;
+}
+
+section.take-action p.video iframe {
+    display: block;
+    margin: 16px 0 0;
 }
 
 .share {
