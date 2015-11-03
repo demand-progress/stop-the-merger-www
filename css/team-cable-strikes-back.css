@@ -533,9 +533,10 @@ section.dark {
 }
 
 section h2 {
+    cursor: pointer;
     font-weight: 300;
-    margin-top: 45px;
     margin-bottom: 35px;
+    margin-top: 45px;
 }
 
 section hr {
