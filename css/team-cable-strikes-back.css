@@ -145,13 +145,13 @@ header .headlines .logo {
 header .headlines h1 {
     color: #ffa600;
     font-family: 'SF Distant Galaxy', sans-serif;
-    font-size: 38px;
+    font-size: 20px;
     letter-spacing: 1px;
     line-height: 1.2;
+    margin: 0 auto;
+    max-width: 740px;
     padding: 28px 32px 0;
     text-transform: none;
-    max-width: 740px;
-    margin: 0 auto;
 }
 
 header .headlines h1 .block {
