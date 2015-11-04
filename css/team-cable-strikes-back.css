@@ -1283,3 +1283,7 @@ h3.nopad {
         transform: scale(0.8);
     }
 }
+
+.hidden {
+    display: none;
+}
