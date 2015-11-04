@@ -52,7 +52,7 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     for (var i = 0; i < requiredFields.length; i++) {
         var field = requiredFields[i];
 
-        if (!document.getElementById(field).value) {
+        if (!document.getElementById(field).value || !document.getElementById(field).value.trim()) {
             e.preventDefault();
             var el = document.getElementById(field);
             alert('Please enter your ' + el.getAttribute('placeholder') + '.');
