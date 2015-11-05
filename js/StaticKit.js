@@ -8,10 +8,10 @@ StaticKit.query = (function () {
     var pairs = location.search.slice(1).split('&');
 
     var result = {};
-    pairs.forEach(function (pair) {
-        pair = pair.split('=');
+    for (var i = 0; i < pairs.length; i++) {
+        var pair = pairs[i].split('=');
         result[pair[0]] = decodeURIComponent(pair[1] || '');
-    });
+    }
 
     return JSON.parse(JSON.stringify(result));
 })();
