@@ -414,8 +414,10 @@ header ul li {
 
 .action .disclaimer.logos {
     background-color: #fff;
+    border-radius: 8px;
+    border: solid 3px #7582ba;
     display: none;
-    padding: 16px;
+    padding: 32px 16px 24px;
     position: relative;
 }
 
@@ -423,8 +425,11 @@ header ul li {
     max-width: 100%;
 }
 
-.action .disclaimer.logos a:first-of-type img {
-    margin-bottom: 32px;
+.action .disclaimer.logos .plus {
+    color: #7582ba;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 16px 0;
 }
 
 .action .disclaimer {
