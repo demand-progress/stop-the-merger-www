@@ -408,6 +408,10 @@ header ul li {
     text-align: left;
 }
 
+.action span.disclaimer.no-swap {
+    display: none;
+}
+
 .action span.disclaimer {
     clear: both;
     color: #7582ba;

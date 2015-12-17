@@ -39,6 +39,11 @@ document.querySelector('[name=action_user_agent]').value = navigator.userAgent;
 document.querySelector('[name=source]').value = StaticKit.query.source;
 document.querySelector('[name=url]').value = location.href;
 
+// Update swappable field based on source
+if (/ns$/i.test(StaticKit.query.source)) {
+    removeNode('.squaredFour');
+    document.querySelector('.disclaimer.no-swap').style.display = 'block';
+}
 
 
 var requiredFields = [
