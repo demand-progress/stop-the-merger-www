@@ -414,25 +414,25 @@ header ul li {
 
 .specific-logos {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 16px;
     border: solid 3px #7582ba;
     display: none;
-    padding: 32px 16px 24px;
-    margin: 32px auto 0;
+    margin: 48px auto 0;
     max-width: calc(100% - 32px);
-    width: 320px;
+    padding: 20px 16px;
     position: relative;
+    width: 320px;
 }
 
 .specific-logos a img {
-    max-width: 100%;
+    width: calc(50% - 32px);
 }
 
 .specific-logos .plus {
     color: #7582ba;
+    display: inline-block;
     font-size: 32px;
-    font-weight: bold;
-    padding: 16px 0;
+    width: 40px;
 }
 
 .action .disclaimer {
