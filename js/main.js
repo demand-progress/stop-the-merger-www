@@ -44,7 +44,7 @@ if (StaticKit.query.cleanedSource === 'fromcredons') {
     removeNode('.squaredFour');
     removeNode('#logos');
 
-    document.querySelector('.disclaimer.logos').style.display = 'block';
+    document.querySelector('.specific-logos').style.display = 'block';
     document.querySelector('.disclaimer.no-swap').style.display = 'block';
 }
 
