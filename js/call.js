@@ -230,5 +230,5 @@ while (i--) {
 }
 
 
-modal_show('calling');
+
 })(); // End closure
