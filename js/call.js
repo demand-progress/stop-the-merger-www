@@ -117,7 +117,7 @@ for (var i = 0; i < fbs.length; i++) {
         'href',
 
         'https://www.facebook.com/sharer/sharer.php?u=' +
-        encodeURIComponent(DOMAIN + '?source=' + StaticKit.query.cleanedSource + '-fbshare')
+        encodeURIComponent(DOMAIN + '/call?source=' + StaticKit.query.cleanedSource + '-fbshare')
     );
 }
 
