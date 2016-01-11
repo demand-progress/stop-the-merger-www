@@ -719,7 +719,7 @@ section .share {
     font-size: 22px;
     color: #999;
     font-weight: 100;
-    padding: 0 32px 60px 32px;
+    padding: 60px 32px;
 }
 
 .press a {
