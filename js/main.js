@@ -40,7 +40,11 @@ document.querySelector('[name=source]').value = StaticKit.query.source;
 document.querySelector('[name=url]').value = location.href;
 
 // Update swappable field based on source
-if (StaticKit.query.cleanedSource === 'fromcredons') {
+var nonSwapSources = [
+    'fromcredons',
+    'fromopenmedians',
+];
+if (nonSwapSources.indexOf(StaticKit.query.cleanedSource) > -1) {
     removeNode('.squaredFour');
     removeNode('#logos');
 
