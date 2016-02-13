@@ -424,6 +424,21 @@ header ul li {
     width: 320px;
 }
 
+.specific-logos a {
+    display: none;
+}
+
+.specific-logos a.demandprogress {
+    display: inline;
+}
+
+.specific-logos a.fromopenmedians img {
+    max-width: calc(50% - 60px);
+    position: relative;
+    margin-top: -8px;
+    top: 8px;
+}
+
 .specific-logos a img {
     width: calc(50% - 32px);
 }
