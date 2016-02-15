@@ -51,6 +51,7 @@ if (nonSwapSources.indexOf(StaticKit.query.cleanedSource) > -1) {
     document.querySelector('.specific-logos').style.display = 'block';
     document.querySelector('.specific-logos a.' + StaticKit.query.cleanedSource).style.display = 'inline';
     document.querySelector('.disclaimer.no-swap').style.display = 'block';
+    document.querySelector('.disclaimer.yes-swap').style.display = 'none';
 }
 
 

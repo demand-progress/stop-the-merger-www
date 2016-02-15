@@ -272,6 +272,7 @@ header ul li {
 }
 
 .action .squaredFour.pooling {
+    display: none;
     margin: 28px 0 0;
     font-size: 14px;
     color: #7582ba;
