@@ -140,6 +140,11 @@ header .headlines h1 {
     text-transform: none;
 }
 
+body.thanks-page header .headlines h1 {
+    margin: 0 auto;
+    max-width: 540px;
+}
+
 header .headlines h1 .block {
     background-color: rgba(54, 57, 85, 0.5);
     display: inline-block;
