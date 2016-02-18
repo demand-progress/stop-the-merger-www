@@ -47,7 +47,12 @@ document.querySelector('.email_signup form').addEventListener('submit', function
         return alert('Please enter your 10 digit phone number.');
     }
 
-    var url = 'https://dp-call-congress.herokuapp.com/create?campaignId=callthefcc&userPhone=' + phone;
+    var url =
+        'https://dp-call-congress.herokuapp.com/create' +
+        '?campaignId=callthefcc' +
+        '&userPhone=' + phone +
+        '&source_id=' + StaticKit.query.cleanedSource;
+
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
