@@ -1262,21 +1262,96 @@ h3.nopad {
     }
 }
 
-
-/* Fixes for Map embed on mobile */
-
-@media screen and (max-width: 390px) {
-    .senators {
-        max-width: 320px;
-        overflow: hidden;
-    }
-    .senators > div {
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
-    }
+.overlay .calling-wrapper {
+    color: #363955;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 720px;
+    padding: 24px 32px 32px;
+    position: relative;
 }
-
-.hidden {
+.overlay .calling-wrapper h3 {
+    font-weight: bold;
+    margin: 0 auto;
+    max-width: 320px;
+}
+.overlay .calling-wrapper form {
+    background-color: #363955;
+    border-radius: 3px;
+    color: #eee;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4);
+    margin: 32px auto 0;
+    max-width: 300px;
+    padding: 16px 32px 32px;
+    position: relative;
+}
+.overlay .calling-wrapper form .wrapper {
+    position: relative;
+}
+.overlay .calling-wrapper form h4 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 auto;
+    padding: 16px 16px 8px;
+}
+.overlay .calling-wrapper form input {
+    border: 1px solid #aaa;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.16);
+    padding: 8px;
+    width: 100%;
+}
+.overlay .calling-wrapper form button {
+    background: none;
+    background-color: #ffa600;
+    border-radius: 3px;
+    border: none;
+    color: #f0f4f5;
+    font-size: 20px;
+    font-weight: bold;
+    height: auto;
+    line-height: 2.4;
+    margin: 16px 0 0;
+    padding: 0 16px;
+    text-shadow: none;
+    transition: background-color 0.16s;
+    width: 100%;
+}
+.overlay .calling-wrapper button:hover {
+    background-color: #ff9000;
+}
+.overlay .calling-wrapper #thanks {
+    background: #ff9000;
+    color: #f0f4f5;
     display: none;
+    font-size: 20px;
+    font-weight: bold;
+    left: 0;
+    letter-spacing: 1px;
+    line-height: 2.4;
+    margin: 16px 0 0;
+    max-width: 430px;
+    padding: 0 16px;
+    position: absolute;
+    text-transform: uppercase;
+    transition: opacity 0.4s ease-out;
+    width: 100%;
+    z-index: 2;
+}
+.overlay .calling-wrapper .sent br,
+.overlay .calling-wrapper .sent h4,
+.overlay .calling-wrapper .sent input {
+    display: none;
+}
+.overlay .calling-wrapper .sent #thanks {
+    display: block;
+}
+.privacy {
+    background: none;
+}
+@media screen and (max-width: 759px) {
+    .overlay .calling-wrapper form button {
+        font-size: 16px;
+    }
 }

@@ -72,6 +72,44 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     modal_show('calling');
 }, false);
 
+var feedbackForm = document.querySelector('.calling-wrapper form');
+feedbackForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Fetch inputs
+    var who = feedbackForm.querySelector('#who');
+    var how = feedbackForm.querySelector('#how');
+
+    var message = '';
+
+    message += who.getAttribute('name') + '\n' + who.value + '\n\n';
+    message += how.getAttribute('name') + '\n' + how.value + '\n\n';
+
+    var url =
+        'https://dp-feedback-tool.herokuapp.com/api/v1/feedback' +
+        '?campaign=nomoremergers' +
+        '&subject=Feedback from No More Mergers' +
+        '&text=' + message;
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            console.log(xhr.response);
+        }
+    };
+    xhr.open('get', encodeURI(url), true);
+    xhr.send();
+
+    document.activeElement.blur();
+    var thanks = feedbackForm.querySelector('#thanks');
+    feedbackForm.querySelector('form button').setAttribute('disabled', true);
+    thanks.style.display = 'block';
+    thanks.clientWidth;
+    thanks.style.opacity = 1;
+
+    modal_show('calling');
+}, false);
+
 function modal_show(id) {
     var overlayNode = document.getElementById(id);
     overlayNode.style.display = 'table';
@@ -159,8 +197,10 @@ function removeNode(target) {
 
 var resizeTimeout = false;
 window.addEventListener('resize', function(e) {
+    clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(onResize, 300);
 }, false);
+onResize();
 
 function onResize() {
     var modals = document.getElementsByClassName('modal');
