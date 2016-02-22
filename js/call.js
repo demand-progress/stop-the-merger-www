@@ -25,6 +25,7 @@ if (isIE) {
     var version = +isIE[1];
     if (version < 10) {
         alert('Unfortunately your browser, Internet Explorer ' + version + ', is not supported.\nPlease visit the site with a modern browser like Firefox or Chrome.\nThanks!');
+        location.href = 'https://www.mozilla.org/en-US/firefox/';
     }
 }
 
