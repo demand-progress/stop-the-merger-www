@@ -40,22 +40,6 @@ document.querySelector('[name=action_user_agent]').value = navigator.userAgent;
 document.querySelector('[name=source]').value = StaticKit.query.source;
 document.querySelector('[name=url]').value = location.href;
 
-// Update swappable field based on source
-var nonSwapSources = [
-    'fromcredons',
-    'fromopenmedians',
-];
-if (nonSwapSources.indexOf(StaticKit.query.cleanedSource) > -1) {
-    removeNode('.squaredFour');
-    removeNode('#logos');
-
-    document.querySelector('.specific-logos').style.display = 'block';
-    document.querySelector('.specific-logos a.' + StaticKit.query.cleanedSource).style.display = 'inline';
-    document.querySelector('.disclaimer.no-swap').style.display = 'block';
-    document.querySelector('.disclaimer.yes-swap').style.display = 'none';
-}
-
-
 var requiredFields = [
     'name',
     'address1',
